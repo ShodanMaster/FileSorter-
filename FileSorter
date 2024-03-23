@@ -1,0 +1,17 @@
+import os
+import shutil
+def FileSort(path):
+    files = os.listdir(path)
+    for file in files:
+        name, extension = os.path.splitext(file)
+        
+        if extension.lower() == '.jpg':
+            shutil.move(file,'path\to\Images-folder')
+
+        elif extension.lower() == '.pdf':
+            shutil.move(file,'path\to\PDF-folder')
+            
+        elif extension.lower() == '.mp4':
+            shutil.move(file,'path\to\Videos-folder')
+
+FileSort('path/to/be/files/sorted')
